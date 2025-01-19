@@ -537,28 +537,17 @@ const ModelNode &MainWindow::getModelFromTabOrFile(const td::String &modelNameOr
 
 bool MainWindow::prepareForClose()
 {
-    
-//    decltype(_tabsToProcess)::iterator it;
-//    ViewForTab* tab;
-    
-    //check if there is any unsaved
+
     bool bModified = false;
     for (int i = _tabView.getNumberOfViews() - 1; i >= 0; --i)
     {
-        //IDz: nema potrebe za dodatnom mapom
-//        it = _tabsToProcess.find(_tabView.getView(i));
-//        if (it == _tabsToProcess.end())
-//            continue;
 
-//        tab = (ViewForTab*)*it;
         
         DocumentType dt;
         _tabView.getContentType(i, dt);
         if (dt != DocumentType::ModelTxtEditor)
             continue;
         
-//        ViewForTab* tab = (ViewForTab*) _tabView.getView(i);
-//        if (tab->isModified())
         if (_tabView.isModified(i))
         {
             bModified = true;
@@ -580,21 +569,14 @@ bool MainWindow::prepareForClose()
         {
             for (int i = _tabView.getNumberOfViews() - 1; i >= 0; --i)
             {
-//                decltype(_tabsToProcess)::iterator it;
-//                ViewForTab* tab;
-                
-//                it = _tabsToProcess.find(_tabView.getView(i));
-//                if (it == _tabsToProcess.end())
-//                    continue;
 
-                //tab = (ViewForTab*)*it;
                 
                 DocumentType dt;
                 _tabView.getContentType(i, dt);
                 if (dt != DocumentType::ModelTxtEditor)
                     continue;
                 
-                //TODO: Izbaciti komplikaciju sa _tabsToProcess.find
+            
                 if (_tabView.isModified(i))
                 {
                     ViewForTab* tab = (ViewForTab*) _tabView.getView(i);
@@ -608,35 +590,15 @@ bool MainWindow::prepareForClose()
         
         if (bClose)
         {
-//            _closeWindow = true;
             this->close();
             return;
         }
         
-        //if(id == gui::Dialog::Button::ID::Delete || id == gui::Dialog::Button::ID::OK) //dont save
-            //GlobalEvents::getMainWindowPtr()->closeTab(this);
-
-//        if (exitProgram && id != gui::Dialog::Button::ID::Delete) {
-//            GlobalEvents::getMainWindowPtr()->prepareForClose();
-//        }
+ 
 
     });
     
 
-//    for (int i = _tabView.getNumberOfViews() - 1; i >= 0; --i)
-//    {
-//        it = _tabsToProcess.find(_tabView.getView(i));
-//        if (it == _tabsToProcess.end())
-//            continue;
-//
-//        tab = (ViewForTab*)*it;
-//
-//        _tabsToProcess.erase(it);
-//        _tabView.showView(i);
-//        if (tab->promptSaveIfNecessary(true))
-//            return false;
-//
-//    }
 
     return false;
 }
@@ -652,18 +614,7 @@ bool MainWindow::shouldClose()
     if(GlobalEvents::settingsVars.warnBeforeClose == false && GlobalEvents::settingsVars.restoreTabs == false)
         return true;
 
-//    if (_closeWindow)
-//        return true;
 
-    //Zasto ovolike komplikacije
-    //Zasto skupljati tabove u posebnu listu kad su svi vec dostupni
-    
-    
-    //TODO: dodati ovdje ako vidljivost dijalog
-    
-//    if (!_tabsToProcess.empty()) {
-//        return prepareForClose();
-//    }
 
     ViewForTab* tab;
     cnt::StringBuilder pathBuilder;
@@ -677,9 +628,7 @@ bool MainWindow::shouldClose()
         if(GlobalEvents::settingsVars.restoreTabs && !tab->getPath().isNull())
             pathBuilder << tab->getPath() << ":";
 
-        //if (GlobalEvents::settingsVars.warnBeforeClose)
-          // _tabsToProcess.emplace(tab); //zar nije jednostavnije napraviti metod isModified umjesto set-a???
-
+   
     }
 
     pathBuilder.getString(_paths);
