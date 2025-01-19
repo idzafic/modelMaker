@@ -1047,7 +1047,7 @@ bool View::save(const td::String& path){
     }
 
 
-    gui::Image::Type tip = (gui::Image::Type)-100;
+    gui::Image::Type tip = (gui::Image::Type)100;
 
     if (path.endsWith(".png"))
         tip = gui::Image::Type::PNG;
@@ -1055,7 +1055,7 @@ bool View::save(const td::String& path){
     if (path.endsWith(".jpg"))
         tip = gui::Image::Type::JPG;
 
-    if((int)tip != -100){
+    if((int)tip != 100){
         gui::Image img;
 
         if(_imageSaveSettings._mode == ImageSaveSettings::ImageSaveStyle::windowSize)
