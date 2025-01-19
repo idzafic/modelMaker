@@ -40,11 +40,11 @@ Primjer svih komandi mogu se pogledati otvaranjem modela "Examples/sin_gen_withN
 
 Dvije osnovne komande su:
 
--import \<relativni put do xml fajla\>
+- import \<relativni put do xml fajla\>
 
 Svaki model (grafički i tekstualni) može se izvesti u ".xml" formatu. Pored toga što se modeli u xml formatu mogu ponovo uvesti u program (kreira se tekstualni model), također se mogu navesti i kao "import" za neki model što znači da će se sve jednačine iz tog modela prenijeti u željeni model prije simulacije.
 
-line amplituda [ inverse ] , output vs t
+
 - line \<ime varijable ili parametra\> \[atributi\], \<ime varijable ili parametra\> \[atributi\] ... versus \<ime varijable za X osu\>
 
 Ovim definišemo kreiranje novog grafika koji prikazuje sve navedene varijable na Y osi u odnosu na posljednju zadanu varijablu nakon ključne riječi "versus" ili "wth" (with respect to). Parametri se prikazuju kao vertikalne ili horizontalne linije.
