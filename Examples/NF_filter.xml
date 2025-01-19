@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model domain="real" name="NF filter" type="DAE">
+	<Params>
+		<Param name="t"/><!-- time-->
+	</Params>
+	<Vars>
+		<Var name="output" out="true"/>
+		<Var name="input" out="true"/>
+	</Vars>
+	<NLEqs/>
+	<TFs>
+		<Eq fx="output/input = (wc)/(s+wc)"/>
+	</TFs>
+</Model>

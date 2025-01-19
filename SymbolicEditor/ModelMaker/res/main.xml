@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<DevRes>
+	<Images>
+		
+		<Res id="txtIcon" path=":images/textEditor.png" desktop="Dark"/>
+		<Res id="guiIcon" path=":images/graphEditor.png" desktop="Dark"/>
+		<Res id="tableData" path=":images/table.png" desktop="Dark"/>
+		<Res id="results" path = "Work/Common/Icons/Formula/Results.png" desktop="Light"/>
+		<Res id="graphData" path = "Work/Common/Icons/Graph/plot.png" desktop="Dark"/>
+		<Res id="logo" path = ":images/logo.png"/>
+		
+		<!-- if the desktop attribute is specified: image color will be inverted in case of different desktop color theme 
+			default desktop is "All", 
+			use "Dark" if the image is best suitable for Dark deskop color theme and will be inverted on Light themes
+			use "Light" if the image is best suitable for Light deskop color theme and will be inverted on Dark themes -->
+
+		<Res id="settings" path = "Work/Common/Icons/Formula/Settings_Light.png" desktop="Light"/>
+		<Res id="newEmpty" path = "Work/Common/Icons/Formula/Formula_Light.png" desktop="Light"/>
+		<Res id="newFromTemplate" path = "Work/Common/Icons/Formula/New_FromTemplate_Light.png" desktop="Light"/>
+		<Res id="open" path = "Work/Common/Icons/Formula/Open2_Light.png" desktop="Light"/>
+		<Res id="newNL" path = "Work/Common/Icons/Formula/New_NL_Dark.png" desktop="Dark"/>
+		<Res id="newWLS" path = "Work/Common/Icons/Formula/New_WLS_Dark.png" desktop="Dark"/>
+		<Res id="newNLCmplx" path = "Work/Common/Icons/Formula/New_NLCmplx_Dark.png" desktop="Dark"/>
+		<Res id="newWLSCmplx" path = "Work/Common/Icons/Formula/New_WLSCmplx_Dark.png" desktop="Dark"/>
+		<Res id="newODE" path = "Work/Common/Icons/Formula/New_ODE_Dark.png" desktop="Dark"/>
+		<Res id="newDAE" path = "Work/Common/Icons/Formula/New_DAE_Dark.png" desktop="Dark"/>
+		<Res id="import" path = "Work/Common/Icons/Formula/Import_Light.png" desktop="Light"/>
+		<Res id="save" path = "Work/Common/Icons/Formula/Save2_Light.png" desktop="Light"/>
+		<Res id="graph" path = "Work/Common/Icons/Formula/plot_color.png" desktop="Dark"/>
+		<Res id="export" path = "Work/Common/Icons/Formula/Export_Light.png" desktop="Light"/>
+		<Res id="start" path = "Work/Common/Icons/Formula/Play48_Light.png" desktop="Light"/>
+	</Images>
+
+	<FileNames>
+		<Res id="ODE" path=":models/ode.modl"/>
+		<Res id="NR" path=":models/nr.modl"/>
+		<Res id="WLS" path=":models/wls.modl"/>
+		<Res id="NRCmplx" path=":models/nrCmplx.modl"/>
+		<Res id="WLSCmplx" path=":models/wlsCmplx.modl"/>
+		<Res id="DAE" path=":models/dae.modl"/>
+		<Res id="example1" path=":models/example1.tfstate"/>
+		<Res id="example2" path=":models/example2.modl"/>
+		<Res id="example2sub1" path=":models/example2_1.modl"/>
+		<Res id="example3" path=":models/example3.modl"/>
+		<Res id="example4" path=":models/example4.modl"/>
+		<Res id="example5" path=":models/example5.modl"/>
+	</FileNames>
+	<SampleDocs>
+		<Res type="imports" path="$HOME/other_bin/TestData/SymbComp"/>
+		<Res type="txtModels" path="$HOME/other_bin/TestData/modelMaker/txtModels"/> 
+		<Res type="graphModels" path="$HOME/other_bin/TestData/modelMaker/graphModels"/> 
+	</SampleDocs>
+</DevRes>

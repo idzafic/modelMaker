@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Groups>		
+	<Group subFolder="NL/real">
+		<Res path="$MyBin/TestData/SymbComp/real/NL.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/Pipes.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/PF_My3.xml" destinationName="PowerFlow3Nodes.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/FnLimit.xml" destinationName="LimitFn_2Eqs.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/FnLimit3.xml" destinationName="LimitFn_3Eqs.xml"/>
+
+		<Res path="$MyBin/TestData/SymbComp/real/PF_4Nodes.xml" destinationName="PowerFlow4Nodes.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/PF_4Nodes_v2.xml" destinationName="PowerFlow4Nodes_v2.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/PF_PV_My3.xml" destinationName="PowerFlowWithLimitedPV.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/PF_WLimits.xml" destinationName="PowerFlowWithLimits.xml"/>
+	</Group>
+	<Group subFolder="NL/cmplx">
+		<Res path="$MyBin/TestData/SymbComp/cmplx/NL.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/cmplx/PF_My3_Comp.xml" destinationName="PowerFlow3NodesAndSubmodel.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/cmplx/PF_My3.xml" destinationName="PowerFlow3Nodes.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/cmplx/PF_WLimits.xml" destinationName="PowerFlowWithLimits.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/cmplx/PF_WLimitsDot.xml" destinationName="PowerFlowWithLimitsAndDotOperator.xml"/>
+	</Group>
+	<Group subFolder="WLS/real">
+		<Res path="$MyBin/TestData/SymbComp/real/SE_NE_My3.xml" destinationName="NormalEqStateEstimation3Nodes.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/SE_NE_My4.xml" destinationName="NormalEqStateEstimation4Nodes.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/SE_NE_My3_WithNoise.xml" destinationName="NormalEqStateEstimation3NodesAndNoise.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/SE_NE_My3_WithNoiseAndStats.xml" destinationName="NormalEqStateEstimation3NodesNoiseAndStats.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/SE_EC_My4.xml" destinationName="EqualityConstrainedStateEstimation4Nodes.xml"/>
+	</Group>
+	<Group subFolder="WLS/cmplx">
+		<Res path="$MyBin/TestData/SymbComp/real/SE_NE_My3.xml" destinationName="NormalEqStateEstimation3Nodes.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/SE_EC_My3.xml" destinationName="EqualityConstrainedStateEstimation3Nodes.xml"/>
+	</Group>
+	<Group subFolder="ODE">
+		<Res path="$MyBin/TestData/SymbComp/real/PendulumODE.xml" destinationName="Pendulum.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/RLC_M626.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/RCSineGen.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/RLCWithSineGenODE.xml" destinationName="SerialRLCWithSineGen.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/RLCWithStepODE.xml" destinationName="SerialRLCWithStepGen.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/RLCWithStepODE_Int.xml" destinationName="SerialRLCWithStepGenAndIntegral.xml"/>
+	</Group>
+	<Group subFolder="DAE">
+		<Res path="$MyBin/TestData/SymbComp/real/PendulumDAE2.xml" destinationName="Pendulum.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/TF_Dorf_E7_7_PID_DAE.xml" destinationName="DorfE7_7.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/TF_Dorf_AP7_2_DAE.xml" destinationName="DorfAP7_2.xml"/> <!--Test this one-->
+
+		<Res path="$MyBin/TestData/SymbComp/real/ACGenWith1Load_WithLimit_Comp_DAE_RK4.xml" destinationName="ACGenWith1LoadMechLimitAndInitialProblem.xml"/>
+	</Group>
+
+	<Group subFolder="TF">
+		<Res path="$MyBin/TestData/SymbComp/real/TF_Dorf_AP7_1_Mult_RK4.xml" destinationName="Dorf_AP7_1.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/TF_Dorf_AP7_2_Mult_RK4.xml" destinationName="Dorf_AP7_2.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/TF_Dorf_CP4_5.xml" destinationName="Dorf_CP4_5.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/TF_Dorf_E7_7_PID_comp.xml" destinationName="Dorf_E7_7_PID.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/TF_Dorf_E7_7_PID.xml" destinationName="Dorf_E7_7_PID_v2.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/TF_Dorf_E7_7_PID_DAE_Mix.xml" destinationName="Dorf_E7_7_PID_MixWithDAE.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/TF_Dorf_E760_PD_Disk_RK4.xml" destinationName="Dorf_E760_PD_Disk.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/TF_Dorf_P7_33_Mult.xml" destinationName="Dorf_P7_33_Mult.xml"/>
+	</Group>
+
+	<Group subFolder="Test">
+		<Res path="$MyBin/TestData/SymbComp/real/Test_DiffEq3_RK2.xml" destinationName="DiffEq3_RK2.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/Test_DiffEq3_RK4.xml" destinationName="DiffEq3_RK4.xml"/>
+		<Res path="$MyBin/TestData/SymbComp/real/Test_DiffEq3_RK6.xml" destinationName="DiffEq3_RK6.xml"/>
+	</Group>
+</Groups>

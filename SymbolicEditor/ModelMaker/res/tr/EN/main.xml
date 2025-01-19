@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<DevRes>
+	<Translations>
+		<Res id="start" tr="Start" />
+		<Res id="startToolTip" tr="Start simulation" />
+		<Res id="startTime" tr=" Start time: " />
+		<Res id="endTime" tr=" End time: " />
+		<Res id="maxIter" tr="Max iterations:" />
+		<Res id="&lt;Ctrl&gt;," tr="&lt;Ctrl&gt;," />
+		<Res id="Cancel" tr="Cancel" />
+		<Res id="settings" tr="Settings..." />
+		<Res id="settingsTT" tr="Application settings" />
+		<Res id="RestartRequired" tr="Restart required" />
+		<Res id="RestartRequiredInfo" tr="To change application laungage a restart is required" />
+		<Res id="DoNoRestart" tr="Restart later" />
+		<Res id="Restart" tr="Restart" />
+		<Res id="settingsShort" tr="Settings" />
+		<Res id="startingExplanation" tr="To open a new tab press on the menu icon in the top-left corner and press &quot;New window&quot; or choose on of the following options:" />
+		<Res id="graphicalEditorLabel" tr="Graphical model editor" />
+		<Res id="textEditorLabel" tr="Textual equation editor" />
+		<Res id="NewTab" tr="New tab" />
+		<Res id="Save" tr="Save" />
+		<Res id="SaveAs" tr="Save as" />
+		<Res id="ExporttoXML" tr="Export as XML" />
+		<Res id="TextualEditor" tr="Text editor" />
+		<Res id="GraphicalEditor" tr="Graphical editor" />
+		<Res id="emptyModel" tr="Empty model" />
+		<Res id="NumberOfInputs" tr="Number of inputs:" />
+		<Res id="NumberOFInputTooltip" tr="Number of inputs for this block" />
+		<Res id="newGraphTab" tr="New Graph Editor" />
+		<Res id="newTextTab" tr="New Equation Editor" />
+		<Res id="error" tr="Error" />
+		<Res id="info" tr="Info" />
+		<Res id="warning" tr="Warning" />
+		<Res id="app" tr="Application" />
+		<Res id="openFromFile" tr="Open file" />
+		<Res id="stepTime" tr="Step: " />
+		<Res id="embedGraph" tr="Embed plot in window" />
+		<Res id="noTypeFound" tr="No type attribute found, assuiming &quot;DAE&quot;" />
+		<Res id="supportedModelsInfo" tr="Inside &quot;Model:&quot; tag use attribute &quot;type =&quot; DAE/ODE/WLS" />
+		<Res id="preproc" tr="Preprocessing commands:" />
+		<Res id="saveFile" tr="Saving model" />
+		<Res id="cantSaveFile" tr="Error occured, could not save model." />
+		<Res id="openModel" tr="Open model" />
+		<Res id="open" tr="Open" />
+		<Res id="cantLoadXML" tr="Cant find or access file" />
+		<Res id="noModelTagFound" tr="&quot;Model:&quot; tag not found, cant interpet file" />
+		<Res id="simulationFailed" tr="failed to extract model, simulation stopped" />
+		<Res id="saveTF" tr="Save transfer function block model" />
+		<Res id="tfFile" tr="Graphical editor save file" />
+		<Res id="fontLabel" tr="Text font: " />
+		<Res id="odeModel" tr="Differential equations" />
+		<Res id="restoreTabs" tr="Restore last opened files on startup" />
+		<Res id="DontSave" tr="Close without saving" />
+		<Res id="NotSavedAlert" tr="has unsaved changes." />
+		<Res id="saveDialogTitle" tr="Save file" />
+		<Res id="confirmCloseSetting" tr="Confirm tab close on unsaved changes" />
+		<Res id="appSettings" tr="Main settings" />
+		<Res id="colorsSettings" tr="Colors" />
+		<Res id="whiteColors" tr="White theme colors:" />
+		<Res id="log" tr="Log" />
+		<Res id="attributes" tr="Attributes" />
+		<Res id="constants" tr="Constants:" />
+		<Res id="functions" tr="Functions:" />
+		<Res id="attributes" tr="Attributes:" />
+		<Res id="keywords" tr="Keywords:" />
+		<Res id="variables" tr="Variables:" />
+		<Res id="paramaters" tr="Paramaters:" />
+		<Res id="comments" tr="Comments:" />
+		<Res id="importColor" tr="Imports:" />
+		<Res id="textColor" tr="Text:" />
+		<Res id="nrModel" tr="Nonlinear model" />
+		<Res id="wlsModel" tr="Weighted least squares" />
+		<Res id="nrModelCmplx" tr="Nonlinear problem (model) in complex domain" />
+		<Res id="wlsModelCmplx" tr="Weighted least squares in complex domain" />
+		<Res id="daeModel" tr="Differential-algebaric model" />
+		<Res id="gain" tr="Gain: " />
+		<Res id="gainTooltip" tr="Block input will be multiplied with this value" />
+		<Res id="monospaceNotFound" tr="MonoSpace font not found, this application will not work properly." />
+		<Res id="examples" tr="Examples:" />
+		<Res id="pidRegulator" tr="PID regulator" />
+		<Res id="newDocumentTB" tr="Novi" />
+		<Res id="newDocumentTT" tr="Novi prazan dokument" />
+		<Res id="newFromTemplate" tr="Template" />
+		<Res id="newFromTemplateTT" tr="New document from template that comprises most important elements" />
+		<Res id="openTB" tr="Otvori" />
+		<Res id="openTT" tr="Otvori ranije kreiran model" />
+		<Res id="saveTB" tr="Snimi" />
+		<Res id="saveTT" tr="Snimi model" />
+		<Res id="importTB" tr="Import" />
+		<Res id="importTT" tr="Import model iz xml formata" />
+		<Res id="exportTB" tr="Export" />
+		<Res id="exportTT" tr="Eksportovanje modela u xml format" />
+		<Res id="plotTBI" tr="Plot" />
+		<Res id="plotTBITT" tr="Podešenja prikaza dijagrama" />
+		<Res id="startTB" tr="Riješi" />
+		<Res id="startTT" tr="Riješi problem (pokreni prcoduru proračuna)" />
+		<Res id="chbTBIcsAndLbls" tr="Show labels below icons on the main toolbar" />
+		<Res id="openModelTF" tr="Open graphical model" />
+		<Res id="emptyModelTF" tr="Empty grpahical model" />
+		<Res id="output" tr="Output:" />
+		<Res id="newOutputBlock" tr="New output block" />
+		<Res id="newGainBlock" tr="New gain block" />
+		<Res id="newNonlinearBlock" tr="New nonlinear block" />
+		<Res id="newSumBlock" tr="New sum block" />
+		<Res id="newTFBlock" tr="New TF block" />
+		<Res id="OpenTxtModel" tr="Open text model" />
+		<Res id="OpenTFModel" tr="Open graphical model" />
+		<Res id="drawFunctionsAutomatically" tr="New models start with default functions enabled" />
+		<Res id="useDefaultFuncs" tr="Draw default plot" />
+		<Res id="NewSimpleModel" tr="New document from template" />
+		<Res id="ImportFromXML" tr="Import from XML" />
+	</Translations>
+</DevRes>

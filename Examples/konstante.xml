@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model>
+	<Params>
+		<Param name="const" val="2"/>
+	</Params>
+</Model>

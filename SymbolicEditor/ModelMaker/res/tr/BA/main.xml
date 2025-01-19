@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<DevRes>
+	<Translations>
+		<Res id="start" tr="Pokreni" />
+		<Res id="startToolTip" tr="Pokreni simulaciju" />
+		<Res id="startTime" tr="Početno vrijeme: " />
+		<Res id="endTime" tr="Krajnje vrijeme: " />
+		<Res id="maxIter" tr="Maksimalan broj iteracija:" />
+		<Res id="&lt;Ctrl&gt;," tr="&lt;Ctrl&gt;p" />
+		<Res id="Cancel" tr="Poništi" />
+		<Res id="settings" tr="Podešenja ..." />
+		<Res id="settingsTT" tr="Podešenja aplikacije" />
+		<Res id="RestartRequired" tr="Restartovanje aplikacije" />
+		<Res id="RestartRequiredInfo" tr="Da bi ste promijenili jezik aplikacije potrebno je ugasiti program" />
+		<Res id="DoNoRestart" tr="Kasnije" />
+		<Res id="Restart" tr="Ponovno pokretanje" />
+		<Res id="settingsShort" tr="Podešenja" />
+		<Res id="startingExplanation" tr="Da bi ste započeli sa radom pritisnute na meni tipku u gornjem lijevom ćošku i pritisnute na &quot;Novi prozor&quot; ili izaberite neku od sljedećih opcija:" />
+		<Res id="graphicalEditorLabel" tr="Grafički uređivač modela" />
+		<Res id="textEditorLabel" tr="Tekstualni unos jednačina" />
+		<Res id="NewTab" tr="Novi prozor" />
+		<Res id="Save" tr="Spasi" />
+		<Res id="SaveAs" tr="Spasi kao" />
+		<Res id="ExporttoXML" tr="Izvezi kao XML" />
+		<Res id="TextualEditor" tr="Tekstualni editor" />
+		<Res id="GraphicalEditor" tr="Grafički editor" />
+		<Res id="emptyModel" tr="Prazan model" />
+		<Res id="NumberOfInputs" tr="Broj ulaza:" />
+		<Res id="NumberOFInputTooltip" tr="Broj ulaza za ovaj blok" />
+		<Res id="newGraphTab" tr="Novi Grafički Editor" />
+		<Res id="newTextTab" tr="Novi Editor Jednačina" />
+		<Res id="error" tr="Greška" />
+		<Res id="info" tr="Informacija" />
+		<Res id="warning" tr="Upozorenje" />
+		<Res id="app" tr="Aplikacija" />
+		<Res id="openFromFile" tr="Otvori iz fajla" />
+		<Res id="stepTime" tr="Korak: " />
+		<Res id="embedGraph" tr="Prikaži graf unutar prozora" />
+		<Res id="noTypeFound" tr="Nije pronaden tip modela, pretpostavlja se &quot;DAE&quot;" />
+		<Res id="supportedModelsInfo" tr="Unutar tag-a &quot;Model:&quot; postaviti atribut &quot;type =&quot; DAE/ODE/WLS" />
+		<Res id="preproc" tr="Pretprocesorske komande:" />
+		<Res id="saveFile" tr="Pohranivanje modela" />
+		<Res id="cantSaveFile" tr="Došlo je do greške, model nije spašen." />
+		<Res id="openModel" tr="Otvori model" />
+		<Res id="open" tr="Otvori" />
+		<Res id="cantLoadXML" tr="Nije moguče pristupiti navedenom fajlu" />
+		<Res id="noModelTagFound" tr="Nije pronađen početak modela (Model:)" />
+		<Res id="simulationFailed" tr="Neuspješno generisanje modela, simuliranje zautsavljeno" />
+		<Res id="saveTF" tr="Spasavanje modela prenosnih blokova" />
+		<Res id="tfFile" tr="Fajl za grafički editor" />
+		<Res id="fontLabel" tr="Font teksta: " />
+		<Res id="odeModel" tr="Diferencijalne jednačine" />
+		<Res id="restoreTabs" tr="Vrati zadnje otvorene modele pri pokretanju" />
+		<Res id="DontSave" tr="Nemoj spašavati" />
+		<Res id="NotSavedAlert" tr="sadrži promjene koje nisu spašene." />
+		<Res id="saveDialogTitle" tr="Spašavanje modela" />
+		<Res id="confirmCloseSetting" tr="Upozori me pri zatvaranju prozora sa nespašenim promjenama" />
+		<Res id="appSettings" tr="Glavne postavke" />
+		<Res id="colorsSettings" tr="Boje" />
+		<Res id="whiteColors" tr="Boje za bijelu pozadinu:" />
+		<Res id="log" tr="Info" />
+		<Res id="attributes" tr="Atributi" />
+		<Res id="constants" tr="Konstantne:" />
+		<Res id="functions" tr="Funkcije:" />
+		<Res id="attributes" tr="Atributi:" />
+		<Res id="keywords" tr="Ključne riječi:" />
+		<Res id="variables" tr="Varijable:" />
+		<Res id="paramaters" tr="Parametri:" />
+		<Res id="comments" tr="Komentari:" />
+		<Res id="importColor" tr="Importi:" />
+		<Res id="textColor" tr="Tekst:" />
+		<Res id="nrModel" tr="Nelinearni model" />
+		<Res id="wlsModel" tr="Metoda najmanjih kvadrata sa težinskim faktorima" />
+		<Res id="nrModelCmplx" tr="Nelinearni model u kompleksnoj domeni" />
+		<Res id="wlsModelCmplx" tr="Metoda najmanjih kvadrata u kompleksnoj domeni" />
+		<Res id="daeModel" tr="Diferencijalno algebarski model" />
+		<Res id="gain" tr="Pojačanje: " />
+		<Res id="gainTooltip" tr="Ulaz ovog bloka če biti pomnožen sa ovom vrijednosti" />
+		<Res id="monospaceNotFound" tr="MonoSpace font nije pronađen na računaru. Ova aplikacija neće raditi ispravno." />
+		<Res id="examples" tr="Primjeri:" />
+		<Res id="pidRegulator" tr="PID regulator" />
+		<Res id="newDocumentTB" tr="Novi" />
+		<Res id="newDocumentTT" tr="Novi prazan dokument" />
+		<Res id="newFromTemplate" tr="Predlošci" />
+		<Res id="newFromTemplateTT" tr="Novi dokument koristeći postojeći mali model koji je korektan i sadrži većinu elemenata" />
+		<Res id="openTB" tr="Otvori" />
+		<Res id="openTT" tr="Otvori ranije kreiran model" />
+		<Res id="saveTB" tr="Snimi" />
+		<Res id="saveTT" tr="Snimi model" />
+		<Res id="importTB" tr="Import" />
+		<Res id="importTT" tr="Import model iz xml formata" />
+		<Res id="exportTB" tr="Export" />
+		<Res id="exportTT" tr="Eksportovanje modela u xml format" />
+		<Res id="plotTBI" tr="Plot" />
+		<Res id="plotTBITT" tr="Podešenja prikaza dijagrama" />
+		<Res id="startTB" tr="Riješi" />
+		<Res id="startTT" tr="Riješi problem (pokreni prcoduru proračuna)" />
+		<Res id="chbTBIcsAndLbls" tr="Prikaži labele ispod ikona na glavnoj alatnoj traci" />
+		<Res id="openModelTF" tr="Otvori grafički model" />
+		<Res id="emptyModelTF" tr="Prazan grafički model" />
+		<Res id="output" tr="Izlaz:" />
+		<Res id="newOutputBlock" tr="Novi izlazlni blok" />
+		<Res id="newGainBlock" tr="Novi blok pojačanja" />
+		<Res id="newNonlinearBlock" tr="Novi nelinearni blok" />
+		<Res id="newSumBlock" tr="Novi zbirni blok" />
+		<Res id="newTFBlock" tr="Novi prijenosni blok" />
+		<Res id="OpenTxtModel" tr="Otvori tekstualni model" />
+		<Res id="OpenTFModel" tr="Otvori grafički model" />
+		<Res id="drawFunctionsAutomatically" tr="Ukljuciti automatsko crtanje funkcija za nove modele" />
+		<Res id="useDefaultFuncs" tr="Generiši graf automatski" />
+		<Res id="NewSimpleModel" tr="Kreiraj dokument iz predloška" />
+		<Res id="ImportFromXML" tr="Uvezi iz XML" />
+	</Translations>
+</DevRes>
