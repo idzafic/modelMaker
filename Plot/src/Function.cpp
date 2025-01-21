@@ -5,16 +5,6 @@ namespace gui
 namespace plot
 {
 
-//IDz: zasto ovakav dizajn sa hrpom C koda?? memcpy, pointers,...??
-//IDz: Budući da se unaprijed zna koliko ima funkcija u graph-u, sve je moglo da se implementira bez pointera
-//EB: Ne zna se unaprijed broj funkcija, funkcije se mogu brisati i dodavati. 
-// Davno sam ovo pisao mozda sam nesto experimentisao, ne sjecam se. Bilo je problema sa nekim natID klasama
-// A isto tako sa obzirom da se ne koristi GPU gledao sam da sve operacije budu sto efikasnije.
-// Tacke svakako trebaju da budu pointeri jer je to najgeneralnije. Pointer na tacke mogu dobiti i iz vektora i iz bilo cega drugog sto drzi niz u jednom bloku memorije
-// ovo se svakako treba implementirati da radi na GPU
-// Dobra stvar je sto sam ovo razdvojio od plottera tako da samo se ovdje trebaju uvesti MVP matrice i ostalo a logika iza plottera ostaje ista.
-
-
 gui::Point Function::findIntersection(const gui::Point& p1, const gui::Point& p2, const gui::Rect& r) // q1 i q2 su ravni rect sa tackama koji prikazuju dole, desno
 {
 
