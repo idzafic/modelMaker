@@ -1,6 +1,6 @@
 # Binaries
 
-https://github.com/idzafic/natID/releases/tag/v3.3.2
+[https://github.com/idzafic/natID/releases/tag/v3.3.2](https://github.com/idzafic/modelMaker/releases)
 
 # Upute korištenja
 Model Maker je program koji olakšava kreiranje matematičkih modela, vrši njihovu simulaciju putem NatID frameworka i zatim prikazuje njihove rezultate.
