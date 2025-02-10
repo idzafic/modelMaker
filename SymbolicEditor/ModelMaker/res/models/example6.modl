@@ -1,0 +1,10 @@
+start(0.00)end(10.00)step(0.010)maxIter(500)preProc(function prava of x versus t
+dataset prava of x versus 0)
+Model [name = Diferential equations, type = ODE]:
+	[out = true] Vars:
+		x = 0
+	Params:
+		c = 10
+		t
+	ODE:
+		x' = c

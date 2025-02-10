@@ -1,0 +1,14 @@
+start(0.00)end(10.00)step(0.010)maxIter(500)preProc()
+Model [name = DAE_model, type = DAE]:
+Vars:
+	
+Params:
+	
+TF:
+	
+ODE:
+	
+NLE:
+	
+PostProc:
+	

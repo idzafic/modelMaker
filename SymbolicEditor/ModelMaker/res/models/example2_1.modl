@@ -1,0 +1,10 @@
+start(0.00)end(10.00)step(0.010)maxIter(500)preProc()
+Model [name = startVal_setter, type = NR]:
+Vars:
+	val = 0
+Params:
+	c = 4
+NLE:
+	val = c^2
+PostProc:
+	base.x = val

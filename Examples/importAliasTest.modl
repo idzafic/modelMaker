@@ -1,0 +1,10 @@
+start(0.000)end(10.000)step(0.0100)maxIter(500)preProc(import konstante.xml as alias
+//umjesto imena fajla moze i ime taba)
+Model [name = alias_test, type = ODE]:
+Vars [out=true]:
+	x = 0
+Params:
+	t //time
+ODE:
+	x' = alias.const
+	

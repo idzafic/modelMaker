@@ -1,0 +1,14 @@
+start(0.00)end(10.00)step(0.010)maxIter(500)preProc(function prava of x versus t
+dataset prava of x versus 0)
+Model [ domain = real, name = pid, type = DAE ]:
+Params:
+Vars:
+	output = 1
+	err = 1
+	var = 0 // kad se izbrise ova varijabla onda model radi
+NLEqs:
+	var=0
+	err = 1
+TFs:
+	output/err = 1/s
+end

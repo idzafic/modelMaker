@@ -1,0 +1,18 @@
+start(0.00)end(10.00)step(0.010)maxIter(500)preProc()
+Model [name = NL Model, type = NR]:
+Vars [ out = true ]:
+	x = 1 		// Variable name and initial value (optional) 
+	y = 1 		// Variable name and initial value (optional) 
+Params:
+	k = 2 		// Parameter name and its value 
+	n = 0.5 	// Parameter name and its value 
+PreProc:
+
+NLEqs:
+	x^x+ln(y)=k*x+n+y*-0.2 	// Second nonlinear equaiton of the model 
+	x^2+y^2=4+0.5*x 		// First nonlinear equaiton of the model 
+
+PostProc:
+	
+end
+	

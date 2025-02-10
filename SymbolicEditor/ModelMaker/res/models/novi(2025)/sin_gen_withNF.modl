@@ -1,0 +1,15 @@
+start(0.000)end(25.000)step(0.0030)maxIter(500)autoFuncs(true)preProc(import NF_filter.xml 
+//put je relativan u odnosu na ovaj fajl
+
+line amplituda [inverse] , output [pattern = circle], wc_time versus t
+line output [width = 0.5], wc [inverse], amplituda wrt w)
+Model [name=sin_gen]:
+	Vars:
+		[out=true] w = 100 //omega
+	Params:
+		wc = 100 //cut off omega na NF filter
+		wc_time = wc / 10 //vrijeme kad w dosegne wc
+		amplituda = 10
+	NLE:
+		input = amplituda * sin(w*t)
+		w = t*10

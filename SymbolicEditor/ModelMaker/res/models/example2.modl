@@ -1,0 +1,12 @@
+start(0.00)end(10.00)step(0.010)maxIter(500)preProc(import init startVal_setter
+
+function prava of x versus t
+dataset prava of x versus 0)
+Model [name = ode_example, type = ODE]:
+Vars [out = true]:
+	x //inicijalna vrijednost treba da bude 16 sa obzirom sa Init model koji se importuje u postavkama.
+	#pogledati finalni xml model koji se salje simulatoru
+Params:
+	t //time
+ODE:
+	x' = 1

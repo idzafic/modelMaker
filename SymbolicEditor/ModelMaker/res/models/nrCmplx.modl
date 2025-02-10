@@ -1,0 +1,17 @@
+start(0.000)end(10.000)step(0.0100)maxIter(500)autoFuncs(true)preProc()
+Model [ domain = cmplx, name = NL Complex, type = NR ]:
+Vars [ conj = false ]:
+	x = e+1i*e 		// e- Euler number
+	y = 0 
+Params:
+	a = 2e-6+3e-7i 
+	b = -0.5-0.2i 
+	c = b-0.5-0.2i  
+	d = -2i*b 
+	e = 10-2i*b 
+NLEqs:
+	x+y=a + b - 2i 
+	x*y=4i +c -d
+end
+
+	

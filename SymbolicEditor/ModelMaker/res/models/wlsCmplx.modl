@@ -1,0 +1,40 @@
+start(0.00)end(10.00)step(0.010)maxIter(500)preProc()
+Model [ domain = cmplx, name = WLS Complex, type = WLS ]:
+Vars: // conj="true" is by default 
+	v1 = v1_cm
+	v2 = v1_cm
+	v3 = v1_cm
+Params:
+	phiSlack = pi/4 // angle of slack 
+	v1_meas = 1 // real magnitude measurement on node 1 
+	v1_cm = v1_meas*e^(phiSlack*1i)
+	w_inj = 1
+	w_v = 1
+	z12 = 0.005+0.03i
+	z23 = 0.005+0.03i
+	z24 = 0.01+0.05i
+	y21 = 1/z12
+	y23 = 1/z23
+	y24 = 1/z24
+	y22 = y21+y23
+	y33 = y23
+	S3_inj = -1-0.3i
+	v2_meas = 0.984267
+	v3_meas = 0.969386
+MeasEqs:
+	// node 1 slack(node) Fix angle 
+	//weight    measurement fn
+	[w = w_v]		v1 - v1_cm 
+	[w = w_v] 	conj(v1) - conj(v1_cm)
+	// node 3 
+	[w = w_inj]	v3*conj(y33*v3-y23*v2) - S3_inj 
+	[w = w_inj]	conj(v3)*(y33*v3-y23*v2) - conj(S3_inj)
+	// voltage measurements
+	[w = w_v]		v2*conj(v2) - v2_meas^2 
+	[w = w_v]		v3*conj(v3) - v3_meas^2
+ECs:
+	//node 2 (ZI) equality constraints
+	y22*v2-y21*v1-y23*v3=0
+	conj(y22*v2-y21*v1-y23*v3)=0
+end
+
