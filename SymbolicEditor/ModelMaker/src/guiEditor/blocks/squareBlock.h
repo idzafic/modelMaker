@@ -42,7 +42,7 @@ public:
 class squareBlockSI : virtual public BlockBase {
 public:
 	class settingsView{
-		elementProperty inputProp;
+		gui::plot::ElementProperty inputProp;
 	protected:
 		gui::VerticalLayout vL;
 	public:
@@ -84,7 +84,7 @@ public:
 class squareBlockSO : virtual public BlockBase {
 public:
 	class settingsView{
-		elementProperty outputProp;
+		gui::plot::ElementProperty outputProp;
 	protected:
 		gui::VerticalLayout vL;
 	public:
@@ -121,7 +121,7 @@ class squareBlockMInameless : virtual public BlockBase {
 	int inputCnt;
 public:
 	class settingsView {
-		elementProperty cntEdit;
+        gui::plot::ElementProperty cntEdit;
 		squareBlockMInameless* currentBlockc = nullptr;
 	protected:
 		gui::VerticalLayout vL;
@@ -153,9 +153,9 @@ class squareBlockMI : virtual public BlockBase, public squareBlockMInameless
 public:
 	class settingsView
 	{
-		elementProperty cntEdit;
+        gui::plot::ElementProperty cntEdit;
 		gui::VerticalLayout* dynamicVL = nullptr;
-		std::deque<elementProperty> inputs;
+		std::deque<gui::plot::ElementProperty> inputs;
 		squareBlockMI *currentBlock = nullptr;
 	protected:
 		gui::View vL;

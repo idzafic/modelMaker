@@ -9,7 +9,7 @@ public:
 		public squareBlockSO::settingsView,
 		public BlockBase::settingsView
 	{
-		elementProperty _value;
+        gui::plot::ElementProperty _value;
 		gui::VerticalLayout _vL;
 		OutputBlock* currentBlock = nullptr;
 	public:

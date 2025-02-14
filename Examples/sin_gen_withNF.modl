@@ -13,4 +13,3 @@ Model [name=sin_gen]:
 	NLE:
 		input = amplituda * sin(w*t)
 		w = t*10
-		

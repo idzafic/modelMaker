@@ -1,7 +1,7 @@
 #include <gui/plot/Renderer.h>
-#include "gui/Shape.h"
+#include <gui/Shape.h>
 #include <gui/DrawableString.h>
-#include "gui/Transformation.h"
+#include <gui/Transformation.h>
 
 namespace gui
 {
@@ -14,16 +14,13 @@ td::String Renderer::to_string(gui::CoordType x) {
     return s;
 }
 
-
-
 Renderer::Renderer(td::ColorID axisColor, gui::Font *axisFont, gui::Font *legendFont, bool startWithMargins):
     _drawMargins(startWithMargins),
     _marginsZero{0.0, 0.0, 0.0, 0.0},
     _axisColor(axisColor),
     _legenda(axisColor, legendFont, {0,0}),
     _font(axisFont)
-{  
-
+{
     _disallowedColors.emplace(td::ColorID::Transparent);
     gui::DrawableString test("1234567890.1234567890e+(1234567890.1234567890)");
     gui::Size sz;
@@ -33,7 +30,6 @@ Renderer::Renderer(td::ColorID axisColor, gui::Font *axisFont, gui::Font *legend
 
     if (startWithMargins)
         setUpDrawingWindow();
-        
 }
 
 void Renderer::setUpDrawingWindow(){
@@ -102,15 +98,15 @@ void Renderer::setAxisColor(td::ColorID boja){
 
 void Renderer::setyAxisName(const td::String &yName)
 {
-    yAxisName = yName; 
-    //_margins.marginLeft = 10; 
+    yAxisName = yName;
+    //_margins.marginLeft = 10;
     setUpDrawingWindow();
     drawAgain();
 }
 
 void Renderer::setxAxisName(const td::String &xName){
-    xAxisName = xName; 
-    //_margins.marginBottom = 10; 
+    xAxisName = xName;
+    //_margins.marginBottom = 10;
     setUpDrawingWindow();
     drawAgain();
 }
@@ -149,9 +145,9 @@ void Renderer::getMargins(double &left, double &right, double &bottom, double &t
 
 void Renderer::showLegend(bool draw)
 {
-    _drawLegend = draw; 
+    _drawLegend = draw;
     setUpDrawingWindow();
-    drawAgain(); 
+    drawAgain();
 }
 
 void Renderer::addFunction(gui::CoordType *x, gui::CoordType *y, size_t length, td::ColorID color, double lineWidth, Function::Pattern pattern, td::String name)
@@ -164,7 +160,6 @@ void Renderer::addFunction(gui::CoordType* x, gui::CoordType* y, size_t length, 
     _funkcije.emplace_back(x, y, length, nextColor(), name, lineWidth, pattern);
     finishAddingFunction(_funkcije.back());
 }
-
 
 void Renderer::addFunction(Function&& fun){
     _funkcije.emplace_back(std::move(fun));
@@ -359,7 +354,7 @@ Function::Pattern Renderer::checkDefaultPattern(const Function::Pattern &pattern
 
     if(pattern.pattern == Pattern::LinePattern::DefaultDot)
         return Pattern(td::DotPattern(p.second));
-    else    
+    else
         return Pattern(td::LinePattern(p.first));
     
 
@@ -441,7 +436,7 @@ td::ColorID Renderer::nextColor(){
         auto boja = _defaultColors.front();
         _defaultColors.pop();
         //if(!_disallowedColors.contains(boja))
-            return boja;        
+            return boja;
     }
 
     if(boja == td::ColorID::Transparent)
@@ -546,16 +541,16 @@ void Renderer::drawAxis(){
             if ((_drawNumbersOutside && yAxisWidth <= _drawingRect.left + yAxisNumberOffset) || (!_drawNumbersOutside && yAxisWidth >= _drawingRect.right - sz.width - yAxisNumberOffset)) {
                 broj.draw({ yAxisWidth - yAxisNumberOffset - sz.width,  lineY - _numberHeight / 2 }, _font, _axisColor);
             }
-            else 
+            else
                 broj.draw({ yAxisWidth + yAxisNumberOffset,  lineY}, _font, _axisColor);
             
-            if (_drawGrid) 
-                gui::Shape::drawLine({ drawingWindow.point.x, lineY }, { drawingWindow.point.x + drawingWindow.size.width,  lineY }, _axisColor, 1, td::LinePattern::Dash); 
+            if (_drawGrid)
+                gui::Shape::drawLine({ drawingWindow.point.x, lineY }, { drawingWindow.point.x + drawingWindow.size.width,  lineY }, _axisColor, 1, td::LinePattern::Dash);
 
         }
 
         if (line < drawingWindow.point.x + drawingWindow.size.width) { // X osa
-            gui::Shape::drawLine({ line, xAxisHeight - markLen }, { line,  xAxisHeight + markLen }, _axisColor, 2); 
+            gui::Shape::drawLine({ line, xAxisHeight - markLen }, { line,  xAxisHeight + markLen }, _axisColor, 2);
 
             gui::DrawableString broj(to_string(startVal));
             broj.measure(_font, sz);
@@ -563,12 +558,12 @@ void Renderer::drawAxis(){
 
             if ((_drawNumbersOutside && xAxisHeight >= _drawingRect.top + xAxisNumberOffset) || ( !_drawNumbersOutside && xAxisHeight <= _drawingRect.top + _numberHeight + xAxisNumberOffset*2))
                 broj.draw({ line - sz.width / 2, xAxisHeight + xAxisNumberOffset }, _font, _axisColor);
-            else 
+            else
                 broj.draw({ line - sz.width / 2 + 9, xAxisHeight - _numberHeight/2 - xAxisNumberOffset }, _font, _axisColor);
 
             constexpr double gridLineWidth = 0.9;
 
-            if (_drawGrid) 
+            if (_drawGrid)
                 gui::Shape::drawLine({ line, _drawingRect.bottom }, { line,  drawingWindow.point.y }, _axisColor, gridLineWidth, td::LinePattern::Dash);
 
         }

@@ -14,7 +14,7 @@ public:
 	{
 
 		gui::VerticalLayout vL;
-		elementProperty equation;
+        gui::plot::ElementProperty equation;
 		NLBlock* thisBlock = nullptr;
 
 	public:

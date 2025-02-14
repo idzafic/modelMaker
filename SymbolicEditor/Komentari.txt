@@ -1,0 +1,30 @@
+IDz promjene:
+
+MainWiondow.cpp:
+
+const ModelNode &MainWindow::getModelFromTabOrFile(const td::String &modelNameOrPathRelative, const td::String &startingPath)
+{
+    bool success;
+    const char *debug1 = modelNameOrPathRelative.c_str();
+    const char *debug2 = startingPath.c_str();
+    if(modelNameOrPathRelative.endsWith(".xml")){//file
+        td::String path;
+        if (startingPath.length() == 0)
+            path = modelNameOrPathRelative;
+        else  //Q: Sta ako je windows pa pocinje sa C:/ D:/ B:/ X:/ ,.... ?
+        {
+            path = startingPath;
+            path += modelNameOrPathRelative.beginsWith("/") ? modelNameOrPathRelative.subStr(1,-1) : modelNameOrPathRelative;
+        }
+
+Greške:
+1. Ne rjesava case9 i IEEE9 (IDz)
+2. Ne uzima u obzir RndGens i Stats (Emir)
+
+Poboljsanja:
+1. Kada se javi greška i ispiše se linija u logu, nemoguće naći gdje se ta linija nalazi. 
+	- Dodati status bar koji će pokazivati trenutnu liniju i kolonu
+	- Dodati opciju GoTo Line
+	- Dodati mogućnost da se klikom na log sa linikom skoči na liniju u editoru
+
+2. 

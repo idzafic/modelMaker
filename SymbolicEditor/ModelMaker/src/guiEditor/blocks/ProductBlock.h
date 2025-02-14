@@ -11,7 +11,7 @@ public:
 		public squareBlockSI::settingsView
 	{
 
-		elementProperty _product;
+        gui::plot::ElementProperty _product;
 		gui::VerticalLayout vL;
 		ProductBlock* currentBlock = nullptr;
 	public:

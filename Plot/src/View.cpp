@@ -492,7 +492,7 @@ void View::showHelp(){
 }
 
 void View::showInformation(){
-      gui::Panel::show<annotDiag>(this, "Annotations", (td::UINT4)9858,\
+      gui::Panel::show<AnnotDiag>(this, "Annotations", (td::UINT4)9858,\
             {{gui::Dialog::Button::ID::OK, tr("@Plot_zatvori") , gui::Button::Type::Normal}}, \
             [](gui::Dialog *ptr){}, this, verticals, horizontals);
     
@@ -1047,7 +1047,7 @@ bool View::save(const td::String& path){
     }
 
 
-    gui::Image::Type tip = (gui::Image::Type)100;
+    gui::Image::Type tip = (gui::Image::Type)-100;
 
     if (path.endsWith(".png"))
         tip = gui::Image::Type::PNG;
@@ -1055,7 +1055,7 @@ bool View::save(const td::String& path){
     if (path.endsWith(".jpg"))
         tip = gui::Image::Type::JPG;
 
-    if((int)tip != 100){
+    if((int)tip != -100){
         gui::Image img;
 
         if(_imageSaveSettings._mode == ImageSaveSettings::ImageSaveStyle::windowSize)

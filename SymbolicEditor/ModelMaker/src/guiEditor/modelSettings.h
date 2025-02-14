@@ -1,9 +1,9 @@
 #pragma once
-#include "gui/View.h"
-#include "../../../common/Property.h"
-#include "gui/VerticalLayout.h"
-#include "gui/TextEdit.h"
-#include "gui/Button.h"
+#include <gui/View.h>
+#include <gui/plot/Property.h>
+#include <gui/VerticalLayout.h>
+#include <gui/TextEdit.h>
+#include <gui/Button.h>
 
 class modelSettings : public gui::View {
 	gui::VerticalLayout v;
@@ -11,11 +11,9 @@ class modelSettings : public gui::View {
 	gui::Button exportBtn;
 
 public:
-	elementProperty name;
+	gui::plot::ElementProperty name;
 	gui::TextEdit edit;
 	modelSettings();
-
-
 
 };
 

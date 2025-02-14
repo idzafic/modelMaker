@@ -17,7 +17,7 @@ public:
 		public squareBlockSI::settingsView
 	{
 
-		elementProperty num, dem;
+        gui::plot::ElementProperty num, dem;
 		gui::VerticalLayout vL;
 		TFBlock* currentBlock = nullptr;
 	public:

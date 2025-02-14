@@ -68,7 +68,7 @@ CodeEdit::CodeEdit(TextEditorView* parent)
 	if (GlobalEvents::settingsVars.font.cCompare("Default") != 0)
 		setFontName(GlobalEvents::settingsVars.font);
     setTabStops(&_tabStop);
-	onChangedSelection([this]() {syntaxHighlightingForCurrentLine(); });
+	onChangedSelection([this](const TextEdit::Selection& sel) {syntaxHighlightingForCurrentLine(); });
 }
 
 void CodeEdit::insertTabsAfterReturn()

@@ -1,22 +1,22 @@
-#include "gui/View.h"
-#include "gui/Dialog.h"
+#include <gui/View.h>
+//#include <gui/Dialog.h>
 #include <vector>
-#include "gui/VerticalLayout.h"
-#include "gui/Label.h"
-#include "../../SymbolicEditor/common/Property.h"
+#include <gui/VerticalLayout.h>
+#include <gui/Label.h>
+#include <gui/plot/Property.h>
+#include <gui/NumericEdit.h>
 
-#include "gui/NumericEdit.h"
 
 
-class annotDiag : public gui::View {
+class AnnotDiag : public gui::View {
 
     gui::VerticalLayout verLay;
     gui::Label horLabel, varLabel;
-    std::vector<elementProperty*> props;
+    std::vector<gui::plot::ElementProperty*> props;
 
 public:
 
-	annotDiag(gui::Frame* pFrame, std::vector<gui::CoordType> &verticals, std::vector<gui::CoordType>& horizontals) : 
+    AnnotDiag(gui::Frame* pFrame, std::vector<gui::CoordType> &verticals, std::vector<gui::CoordType>& horizontals) :
     horLabel("Horizontal annotations:"), varLabel("Vertical annotations:"),
     verLay(verticals.size() + horizontals.size() + 2)
     {	
@@ -33,7 +33,7 @@ public:
                 td::String name;
                 name.format("line%d: ", i + 1);
                 td::Variant v(vector[i]);
-                auto ptr = new elementProperty(name, v.getType(), "x axis value that the vertical line is crossing", v);
+                auto ptr = new gui::plot::ElementProperty(name, v.getType(), "x axis value that the vertical line is crossing", v);
                 gui::CoordType& val = vector[i];
                 
                 ptr->Action = [&val](const td::Variant& v) {
@@ -50,7 +50,7 @@ public:
         
     }
 
-    ~annotDiag() {
+    ~AnnotDiag() {
         for (size_t i = 0; i < props.size(); ++i) {
             delete props[i];
         }

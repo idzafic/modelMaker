@@ -6,7 +6,7 @@
 #include <gui/CheckBox.h>
 #include <gui/Button.h>
 #include <gui/Label.h>
-#include "./../../../../common/Property.h"
+#include <gui/plot/Property.h>
 #include <gui/VerticalLayout.h>
 #include <arch/ArchiveIn.h>
 #include <arch/ArchiveOut.h>
