@@ -13,7 +13,7 @@ const std::unordered_set<td::String> BaseNode::functionKeywords{ "abs","acos","a
 
 const std::unordered_set<td::String> BaseNode::constantsKeywords{"pi", "e", "true", "false", "LowLimit", "HighLimit"};
 const std::unordered_set<td::String> BaseNode::syntaxKeywords{"base", "if", "else", "end", "Model", "Vars", "Var", "Params", "Param", "Params", "NLEqs", "NLE", \
-"RndGens", "Group", "ODEqs", "ODE", "Init", "PreProc", "PostProc", "MeasEqs", "Limits", "EC", "ECs", "TFs", "TF", "Expressions"};
+"RndGens", "Group", "ODEqs", "ODE", "Init", "PreProc", "PostProc", "MeasEqs", "Limits", "EC", "ECs", "TFs", "TF", "Expressions", "SubModel"};
 
 int BaseNode::_processingLine = 0;
 
@@ -49,12 +49,20 @@ bool BaseNode::printNode(const td::String& path) const
 
 void BaseNode::printNode(xml::Writer& w) const
 {
-	w.startNode(this->getName());
+	if(strcmp(this->getName(), "SubModel") == 0){
+		w.startNode("Init");
+		w.startNode("Model");
+	}
+	else
+		w.startNode(this->getName());
 	for (auto & at : this->_attribs)
 		w.attributeC(at.first.c_str(), at.second);
 
-	if (nodes.size() == 0)
+	if (nodes.size() == 0){
+		if(strcmp(this->getName(), "SubModel") == 0)
+			w.endNode();
 		w.endNode();
+	}
 
 	cnt::PushBackVector<td::String> comSides;
 
@@ -91,7 +99,9 @@ void BaseNode::printNode(xml::Writer& w) const
 	if (nodes.size() != 0) {
 		for (BaseNode * var : nodes)
 			var->printNode(w);
-
+			
+		if(strcmp(this->getName(), "SubModel") == 0)
+			w.endNode();
 		w.endNode();
 	}
 

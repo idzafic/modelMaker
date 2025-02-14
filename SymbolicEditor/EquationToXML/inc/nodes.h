@@ -120,9 +120,11 @@ public:
 
 class ModelNode : public BaseNode {
 	bool done = false;
+	
 	ModelNode(const ModelNode& model, const td::String &alias);
 public:
-
+	bool submodel = false;
+	
 	enum class addType{combine, init};
 
 	struct exceptionInvalidBlockName { td::String message; int line; };
@@ -139,7 +141,7 @@ public:
 	bool readFromFile(const td::String &path);
 	BaseNode* createCopy(const td::String& alias) const override;
 	inline const char* getName() const override {
-		return "Model";
+		return submodel ? "SubModel" : "Model";
 	}
 
 };

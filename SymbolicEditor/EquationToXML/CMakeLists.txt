@@ -14,8 +14,6 @@ include(${WORK_ROOT}/DevEnv/Common.cmake)
 #END dio koji ide u sve solutions
 
 
-
-
 include("./EqToXML.cmake")
 
 

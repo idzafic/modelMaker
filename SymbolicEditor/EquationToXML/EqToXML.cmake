@@ -1,5 +1,5 @@
 set(EqToXML_LIB_NAME Eq2ToXMLLib)
-set(EqToXML_EXE_NAME XMLModelMakerExe)
+set(EqToXML_EXE_NAME modlToXML)
 
 file(GLOB EQ2XML_SOURCES  ${CMAKE_CURRENT_LIST_DIR}/src/library/*.cpp)
 file(GLOB EQ2XML_INCLUDE  ${CMAKE_CURRENT_LIST_DIR}/inc/*.h)

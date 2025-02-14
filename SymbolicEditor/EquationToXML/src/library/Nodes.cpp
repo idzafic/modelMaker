@@ -68,6 +68,8 @@ static inline td::String getStringFromPtr(const char* start, const char* end) {
 	return td::String(start, end - start);
 }
 
+
+
 class conditionNode : public BaseNode {
 public:
 	enum class type { thenn, elsee };
@@ -633,9 +635,13 @@ public:
 		return false;
 	}
 
+	bool prettyPrint(cnt::StringBuilder<>& str, td::String& indent) const override{
+		return false;
+	}
+
 	void prettyPrintClosing(cnt::StringBuilder<>& str, td::String &indent) const override{
-		indent.reduceSize(1);
-		str << indent << "\n";
+		//indent.reduceSize(1);
+		//str << indent << "\n";
 	}
 
 	inline const char* getName() const override {
@@ -647,7 +653,7 @@ public:
 ModelNode::ModelNode(const ModelNode& model, const td::String &alias):
 	BaseNode(model, alias)
 {
-
+	submodel = model.submodel;
 }
 
 ModelNode &ModelNode::operator=(const ModelNode &model)
@@ -681,12 +687,17 @@ bool ModelNode::nodeAction(const char* cmndStart, const char* cmndEnd, BaseNode*
 		newChild = this;
 		return true;
 	}
+	else if (compareUpperCase(cmndStart, "SUBMODEL")) {
+		auto mod = new ModelNode();
+		addChild(mod);
+		mod->submodel = true;
+	}
 	else if (compareUpperCase(cmndStart, "NLEQS") || compareUpperCase(cmndStart, "NL"))
 		addChild(new NLEquationsNode());
 	else if (compareUpperCase(cmndStart, "ODEQS") || compareUpperCase(cmndStart, "ODE"))
 		addChild(new ODEquationsNode());
 	else if (compareUpperCase(cmndStart, "INIT"))
-		addChild(new initNode);
+		return true;//addChild(new initNode);
     else if (compareUpperCase(cmndStart, "PREPROC"))
         addChild(new preProcNode);
 	else if (compareUpperCase(cmndStart, "POSTPROC"))
@@ -841,8 +852,11 @@ public:
 
 		td::StringExt* name = TSAX::_pLastNode->pName;
 	
-		if (name->cCompare("Model") == 0)
-			_lastNode->addChild(new ModelNode);
+		if (name->cCompare("Model") == 0){
+			auto node = new ModelNode;
+			node->submodel = true;
+			_lastNode->addChild(node);
+		}
 		else if (name->cCompare("Vars") == 0)
 			_lastNode->addChild(new varsNode);
 		else if (name->cCompare("Var") == 0)
@@ -864,7 +878,7 @@ public:
 		else if (name->cCompare("ODEqs") == 0)
 			_lastNode->addChild(new ODEquationsNode);
 		else if (name->cCompare("Init") == 0)
-			_lastNode->addChild(new initNode);
+			return true;//_lastNode->addChild(new initNode);
         else if (name->cCompare("PreProc") == 0)
             _lastNode->addChild(new preProcNode);
 		else if (name->cCompare("PostProc") == 0)
@@ -906,6 +920,10 @@ public:
 
 	void onCloseNode()
 	{
+		td::StringExt* name = TSAX::_pLastNode->pName;
+		if(name->cCompare("init") == 0){
+			return;
+		}
 		_closedNode = _lastNode;
 		_lastNode->setAsDone();
 		if (_lastNode->getParent() != nullptr)

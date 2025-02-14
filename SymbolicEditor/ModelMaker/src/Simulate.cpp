@@ -3,7 +3,6 @@
 #include <sc/ISolutionBuffer.h>
 #include <type_traits>
 #include <chrono>
-#include "textEditor/View.h"
 #include "BaseView.h"
 #include "ModelSettings.h"
 #include "DataDrawer.h"
